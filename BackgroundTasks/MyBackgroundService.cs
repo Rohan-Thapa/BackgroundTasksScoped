@@ -21,7 +21,7 @@ namespace BackgroundTasks
                     _logger.LogInformation("From MyBackgroundService: ExecuteAsync {datetime}", DateTime.Now);
                     var scopedService = scope.ServiceProvider.GetRequiredService<IScopedService>();
                     scopedService.Write();  // here by default the service is in Singleton while we injected the Scoped ones here.
-                    await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+                    await Task.Delay(TimeSpan.FromSeconds(65), stoppingToken);
                 }
             }
         }

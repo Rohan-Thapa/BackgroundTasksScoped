@@ -13,7 +13,8 @@
         }
         public void Write()
         {
-            _logger.LogInformation("MyScopedService {Id}", Id);
+            _logger.LogInformation("MyScopedService `Database Sync` {Id}", Id);
+            DatabaseSync.Synchorinzation();
         }
     }
 
